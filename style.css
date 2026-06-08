@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    zoom: 1.1;
 }
 
 body {
@@ -68,8 +69,8 @@ nav {
 
 .nav-links a {
     font-size: 8.5pt;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-transform: none;
     color: var(--mid);
     text-decoration: none;
     transition: color 0.2s;
