@@ -18,16 +18,17 @@
     box-sizing: border-box;
 }
 
+/* ── Base font: スマホ14px、PC16px ── */
 html {
     scroll-behavior: smooth;
-    zoom: 1.1;
+    font-size: clamp(14px, 1.2vw, 16px);
 }
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background: var(--bg);
     color: var(--ink);
-    font-size: 13pt;
+    font-size: 1rem;
     line-height: 1.7;
 }
 
@@ -41,39 +42,44 @@ nav {
     background: rgba(250, 250, 248, 0.93);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--rule);
-    padding: 13px 0;
+    padding: 0.8rem 0;
 }
 
 .nav-inner {
-    max-width: 1100px;
+    max-width: none;
     margin: 0 auto;
-    padding: 0 56px;
+    padding: 0 3.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .nav-logo {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 11pt;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--ink);
-    letter-spacing: 2px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 28px;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    justify-content: flex-end;
 }
 
 .nav-links a {
-    font-size: 8.5pt;
-    letter-spacing: 0.5px;
-    text-transform: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
     color: var(--mid);
     text-decoration: none;
     transition: color 0.2s;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -84,7 +90,7 @@ nav {
 .page {
     max-width: none;
     margin: 0 auto;
-    padding: 100px 56px 52px;
+    padding: 6rem 3.5rem 3rem;
     background: var(--white);
     min-height: 100vh;
 }
@@ -93,38 +99,38 @@ nav {
 .header {
     display: flex;
     align-items: stretch;
-    gap: 24px;
-    padding-bottom: 10px;
+    gap: 1.5rem;
+    padding-bottom: 0.6rem;
     border-bottom: 2px solid var(--ink);
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
 }
 
 .header-left {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 2px;
+    gap: 0.15rem;
 }
 
 .name {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 30pt;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
     line-height: 1.1;
-    letter-spacing: 4px;
+    letter-spacing: 0.15em;
     font-weight: 700;
 }
 
 .name-en {
-    font-size: 12pt;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     color: var(--mid);
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
     line-height: 1.3;
 }
 
 .header-contact-inline {
-    margin-top: 6px;
-    font-size: 9pt;
+    margin-top: 0.4rem;
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem);
     color: var(--mid);
     line-height: 1.8;
 }
@@ -137,19 +143,19 @@ nav {
 .header-right {
     display: flex;
     align-items: flex-end;
-    gap: 14px;
+    gap: 0.9rem;
     margin-left: auto;
 }
 
 .header-affil {
     text-align: right;
-    font-size: 9pt;
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem);
     color: var(--mid);
     line-height: 1.7;
 }
 
 .header-photo {
-    width: 90px;
+    width: clamp(60px, 8vw, 90px);
     height: auto;
     border-radius: 2px;
     display: block;
@@ -158,73 +164,74 @@ nav {
 
 /* ── Sections ── */
 section {
-    margin-bottom: 16px;
-    scroll-margin-top: 70px;
+    margin-bottom: 1rem;
+    scroll-margin-top: 4rem;
 }
 
 .section-title {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 14pt;
-    letter-spacing: 3px;
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    letter-spacing: 0.15em;
     color: var(--accent);
     border-bottom: 1px solid var(--rule);
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.7rem;
     font-weight: 700;
 }
 
 .sub-title {
-    font-size: 10pt;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--mid);
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
 }
 
 /* ── Two-col layout ── */
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 36px;
+    gap: 0 2.5rem;
 }
 
 /* ── Entry ── */
 .entry {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .entry-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 8px;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .entry-title {
     font-weight: 700;
-    font-size: 10pt;
+    font-size: 0.9rem;
     color: var(--ink);
 }
 
 .entry-date {
-    font-size: 9pt;
+    font-size: 0.8rem;
     color: var(--light);
     white-space: nowrap;
     flex-shrink: 0;
 }
 
 .entry-sub {
-    font-size: 9pt;
+    font-size: 0.8rem;
     color: var(--mid);
-    margin-top: 1px;
+    margin-top: 0.05rem;
 }
 
 /* ── Skills grid ── */
 .skills-grid {
     display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 5px 10px;
-    font-size: 9.5pt;
+    grid-template-columns: 8rem 1fr;
+    gap: 0.3rem 0.6rem;
+    font-size: 0.85rem;
     align-items: start;
 }
 
@@ -254,18 +261,18 @@ section {
 .pub-kind-label {
     font-weight: 700;
     color: var(--accent);
-    margin-bottom: 4px;
-    margin-top: 10px;
-    font-size: 11pt;
+    margin-bottom: 0.25rem;
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .pub {
-    margin-bottom: 7px;
-    font-size: 11pt;
+    margin-bottom: 0.45rem;
+    font-size: 0.88rem;
     color: var(--mid);
     line-height: 1.55;
-    padding-left: 2.5em;
-    text-indent: -1.5em;
+    padding-left: 2.2em;
+    text-indent: -1.4em;
 }
 
 .pub a {
@@ -284,7 +291,7 @@ section {
 .pub-num {
     font-weight: 700;
     color: var(--ink);
-    margin-right: 4px;
+    margin-right: 0.25rem;
 }
 
 .pub em {
@@ -292,7 +299,6 @@ section {
     font-style: normal;
     font-weight: 500;
 }
-
 
 .award-badge {
     display: inline;
@@ -302,7 +308,7 @@ section {
     font-weight: 700;
     padding: 0;
     border-radius: 0;
-    margin-left: 4px;
+    margin-left: 0.25rem;
     vertical-align: baseline;
     letter-spacing: 0;
 }
@@ -311,39 +317,73 @@ section {
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 9px;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
 }
 
 .tag {
-    font-size: 8.5pt;
+    font-size: 0.78rem;
     border: 1px solid var(--rule);
-    padding: 2px 10px;
+    padding: 0.1rem 0.6rem;
     border-radius: 20px;
     color: var(--mid);
 }
 
 /* ── Footer ── */
 footer {
-    margin-top: 48px;
-    padding-top: 16px;
+    margin-top: 3rem;
+    padding-top: 1rem;
     border-top: 1px solid var(--rule);
     text-align: center;
-    font-size: 8.5pt;
+    font-size: 0.75rem;
     color: var(--light);
 }
 
-/* ── Responsive ── */
-@media (max-width: 640px) {
+/* ── Responsive: tablet ── */
+@media (max-width: 900px) {
 
-    .page,
-    .nav-inner {
-        padding-left: 20px;
-        padding-right: 20px;
+    .nav-inner,
+    .page {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
-    .name {
-        font-size: 20pt;
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: 1.5rem 0;
+    }
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .nav-inner,
+    .page {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    .page {
+        padding-top: 5rem;
+    }
+
+    nav {
+        padding: 0.6rem 0;
+    }
+
+    .nav-logo {
+        font-size: 0.85rem;
+    }
+
+    .nav-links {
+        gap: 0.4rem 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.72rem;
     }
 
     .header {
@@ -359,15 +399,19 @@ footer {
         text-align: left;
     }
 
-    .two-col {
-        grid-template-columns: 1fr;
+    .header-photo {
+        width: 70px;
     }
 
     .skills-grid {
-        grid-template-columns: 110px 1fr;
+        grid-template-columns: 6.5rem 1fr;
     }
 
-    .nav-links {
-        gap: 14px;
+    .pub {
+        font-size: 0.82rem;
+    }
+
+    section {
+        scroll-margin-top: 5rem;
     }
 }
