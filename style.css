@@ -266,6 +266,15 @@ section {
     text-indent: -1.5em;
 }
 
+.pub a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.pub a:hover {
+    text-decoration: underline;
+}
+
 .pub-num {
     font-weight: 700;
     color: var(--ink);
