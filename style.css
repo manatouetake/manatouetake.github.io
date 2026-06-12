@@ -256,6 +256,105 @@ section {
     text-decoration: underline;
 }
 
+.product-entry {
+    display: flex;
+    gap: 1.6rem;
+    align-items: flex-start;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.product-entry:last-child {
+    border-bottom: none;
+}
+
+.product-thumb-wrap {
+    flex: 0 0 180px;
+    width: 180px;
+    height: 126px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.product-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin-bottom: 0.45rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.product-link-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.product-link {
+    font-size: 0.76rem;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 3px;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+}
+
+.product-link:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.product-link--gh {
+    border-color: var(--mid);
+    color: var(--mid);
+}
+
+.product-link--gh:hover {
+    background: var(--mid);
+    color: var(--white);
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: var(--mid);
+    margin-bottom: 0.6rem;
+}
+
+@media (max-width: 640px) {
+    .product-entry {
+        flex-direction: column;
+    }
+
+    .product-thumb-wrap {
+        width: 100%;
+        height: 180px;
+        flex: none;
+    }
+}
+
 /* ── Publications ── */
 .pub-kind-label {
     font-weight: 700;
